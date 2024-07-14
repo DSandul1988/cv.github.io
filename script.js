@@ -8,6 +8,12 @@ document.addEventListener("DOMContentLoaded", function () {
       updateContent(categoryName);
     });
   });
+  if (window.innerWidth <= 768) {
+    const contentDisplay = document.getElementById("content-display");
+    if (contentDisplay) {
+      contentDisplay.scrollIntoView({ behavior: "smooth" });
+    }
+  }
 
   danName.addEventListener("click", function () {
     resetHomepage();
